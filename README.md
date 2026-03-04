@@ -1,6 +1,20 @@
 # 🚀 InsightStream
 ### AI-Powered Real-time Log Intelligence
 
+![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?logo=springboot&logoColor=white)
+![WebFlux](https://img.shields.io/badge/Spring-WebFlux-6DB33F?logo=spring&logoColor=white)
+![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?logo=apachekafka&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
+
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean%20Gradient-0080FF?logo=digitalocean&logoColor=white)
+![Llama3](https://img.shields.io/badge/Llama3-000000?logo=meta&logoColor=white)
+
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
+![SSE](https://img.shields.io/badge/SSE-Real--time%20Streaming-orange)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+
 > 🔍 Detect anomalies in massive log streams using **Kafka + AI**
 
 InsightStream is an **AI-driven observability platform** that analyzes log streams in real time using **Apache Kafka and DigitalOcean Gradient AI models**.
@@ -13,12 +27,17 @@ Instead of manually searching through thousands of logs, InsightStream automatic
 
 Real-time monitoring dashboard
 
-<img width="587" height="506" alt="image" src="https://github.com/user-attachments/assets/02d36e28-f997-476a-9c49-6a37fc6e823e"/>
+<img width="702" height="840" alt="image" src="https://github.com/user-attachments/assets/61f28222-5f4b-4a4b-aaf7-bb11c062f6f7" />
 
 - Live log stream
 - AI anomaly detection
 - Alert notifications
 - Operational metrics
+
+---
+
+## 🔗 Live Demo 
+
 
 ---
 
@@ -41,16 +60,36 @@ InsightStream solves this by combining **stream processing and AI analysis**.
 ---
 
 # 🏗 System Architecture
-Application Logs
-↓
-Kafka Stream
-↓
-Spring Boot Consumer
-↓
-DigitalOcean Gradient AI
-↓
-InsightStream Dashboard
-
+```text
+             +------------------+
+             |  Application     |
+             |  Log Producers   |
+             +---------+--------+
+                       |
+                       v
+                 +-----------+
+                 |  Kafka    |
+                 |  Streams  |
+                 +-----+-----+
+                       |
+                       v
+             +--------------------+
+             | Spring Boot        |
+             | Log Consumer       |
+             +---------+----------+
+                       |
+                       v
+            +----------------------+
+            | DigitalOcean         |
+            | Gradient AI Inference|
+            +----------+-----------+
+                       |
+                       v
+              +----------------+
+              | Dashboard UI   |
+              | (Next.js)      |
+              +----------------+
+```
 
 ### Flow
 
@@ -124,40 +163,6 @@ Features:
 
 ---
 
-# 🛠 Tech Stack
-
-## 💻 Backend & Core
-
-| Technology | Description |
-|------------|-------------|
-| 🟣 Kotlin | Backend development |
-| 🍃 Spring Boot | Microservice framework |
-| 🟠 Apache Kafka | Log streaming platform |
-| 🔗 WebFlux | Reactive processing |
-| 🐳 Docker | Containerized deployment |
-
----
-
-## 🤖 Artificial Intelligence
-
-| Technology | Description |
-|------------|-------------|
-| 🌊 DigitalOcean Gradient | Serverless AI inference |
-| 🧠 Llama3-8B | Anomaly detection model |
-
----
-
-## 🌐 Frontend & Visualization
-
-| Technology | Description |
-|------------|-------------|
-| ⚛️ React | UI framework |
-| ▲ Next.js | Frontend platform |
-| 🔄 SSE | Real-time data streaming |
-| 🎨 CSS | Dashboard styling |
-
----
-
 # 📊 Dashboard Features
 
 InsightStream dashboard provides:
@@ -171,6 +176,7 @@ InsightStream dashboard provides:
 
 # 🧪 Scenario Simulation
 
+The dashboard provides built-in log generators so users can instantly simulate incidents and observe the detection pipeline.
 To demonstrate anomaly detection, the dashboard includes built-in log generators:
 
 | Scenario | Description |
@@ -181,6 +187,35 @@ To demonstrate anomaly detection, the dashboard includes built-in log generators
 | 💾 Memory Pressure | High memory usage |
 
 These scenarios allow real-time observation of the AI detection pipeline.
+
+---
+
+## 📦 Deployment
+
+InsightStream can be deployed using Docker Compose.
+
+Services included:
+
+- Apache Kafka
+- Spring Boot backend
+- Next.js dashboard
+
+Production deployment can be extended with:
+
+- Log collectors (Fluent Bit / Vector)
+- Kafka clusters
+- Reverse proxy (NGINX)
+
+## 🤖 AI Prompt Design
+
+InsightStream uses structured prompts to analyze log windows.
+
+The AI model evaluates:
+
+- anomaly likelihood
+- severity level
+- incident category
+- recommended actions
 
 ---
 
@@ -223,9 +258,10 @@ InsightStream
    ├─ backend
    └─ dashboard
 ```
+
 ## 🔮 Future Improvements
 
-Incident timeline analysis
-Root cause detection
-Multi-service correlation
-distributed tracing integration
+- Incident timeline analysis
+- Root cause detection
+- Multi-service correlation
+- Distributed tracing integration
