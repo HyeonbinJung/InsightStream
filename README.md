@@ -1,99 +1,231 @@
-# 🚀 InsightStream: AI-Powered Real-time Log Intelligence
+# 🚀 InsightStream
+### AI-Powered Real-time Log Intelligence
 
-> An intelligent monitoring platform that detects anomalies in real-time
-> log streams using Kafka and AI.
+> 🔍 Detect anomalies in massive log streams using **Kafka + AI**
 
-------------------------------------------------------------------------
+InsightStream is an **AI-driven observability platform** that analyzes log streams in real time using **Apache Kafka and DigitalOcean Gradient AI models**.
 
-## 📌 Project Overview
+Instead of manually searching through thousands of logs, InsightStream automatically detects anomalies, summarizes incidents, and provides operational insights through a **real-time dashboard**.
 
-**InsightStream** analyzes massive volumes of server logs generated in
-modern high‑traffic environments **in real time**.
+---
 
-Rather than simply collecting logs, the system leverages **DigitalOcean
-Gradient-powered AI models** to identify abnormal patterns instantly.
-This significantly reduces incident response time and helps operators
-quickly detect and diagnose system issues.
+# 📸 Demo
 
-------------------------------------------------------------------------
+Real-time monitoring dashboard
 
-## 🛠 Tech Stack
+<img width="587" height="506" alt="image" src="https://github.com/user-attachments/assets/02d36e28-f997-476a-9c49-6a37fc6e823e"/>
 
-### 💻 Backend & Core
+- Live log stream
+- AI anomaly detection
+- Alert notifications
+- Operational metrics
 
-  -----------------------------------------------------------------------
+---
 
-  -----------------------------------------------------------------------
+# 🧠 Why InsightStream?
 
-------------------------------------------------------------------------
+Modern systems generate **millions of logs per hour**.
 
-### 🤖 Artificial Intelligence
+Traditional monitoring tools rely on:
 
-  -----------------------------------------------------------------------
+❌ manual investigation  
+❌ static threshold alerts  
+❌ delayed incident detection  
 
-  -----------------------------------------------------------------------
+InsightStream solves this by combining **stream processing and AI analysis**.
 
-------------------------------------------------------------------------
+✔ Detect anomalies automatically  
+✔ Identify incident patterns  
+✔ Provide actionable insights  
 
-### 🌐 Frontend & Visualization
+---
 
-  -----------------------------------------------------------------------
+# 🏗 System Architecture
+Application Logs
+↓
+Kafka Stream
+↓
+Spring Boot Consumer
+↓
+DigitalOcean Gradient AI
+↓
+InsightStream Dashboard
 
-  -----------------------------------------------------------------------
 
-------------------------------------------------------------------------
+### Flow
 
-## 🏗 System Architecture
+1️⃣ **Producer**
 
-1.  **Producer**\
-    Application or server logs are generated and sent to Kafka.
+Applications generate logs and publish them to Kafka.
 
-2.  **Kafka Stream**\
-    Kafka buffers and reliably delivers high-volume log data streams.
+2️⃣ **Kafka Stream**
 
-3.  **Consumer (Spring Boot)**\
-    The backend consumes logs from Kafka and sends them to the Gradient
-    AI API for analysis.
+Kafka ensures reliable and scalable log streaming.
 
-4.  **AI Inference**\
-    The AI model evaluates the logs and returns an anomaly score.
+3️⃣ **Consumer (Spring Boot)**
 
-5.  **Web Dashboard**\
-    Results are streamed via WebSocket and displayed in real time on the
-    monitoring dashboard.
+The backend consumes logs and performs analysis.
 
-------------------------------------------------------------------------
+4️⃣ **AI Inference**
 
-## 🌟 Key Features
+DigitalOcean Gradient models evaluate anomalies.
 
-### Zero‑loss Ingestion
+5️⃣ **Real-time Dashboard**
 
-Kafka ensures reliable and fault-tolerant log processing.
+Insights are streamed to the UI instantly.
 
-### AI‑Powered Analysis
+---
 
-Uses machine learning instead of static thresholds to detect anomalies.
+# ✨ Key Features
 
-### Instant Alerting
+## ⚡ Real-time Log Streaming
 
-Administrators receive immediate alerts when abnormal behavior is
-detected.
+Apache Kafka processes log events in real time.
 
-### Interactive Visualization
+- High throughput
+- fault tolerant
+- scalable ingestion
 
-Real-time dashboards provide clear visibility into system health.
+---
 
-------------------------------------------------------------------------
+## 🤖 AI-Powered Anomaly Detection
 
-## 🚀 Getting Started
+Logs are analyzed using **DigitalOcean Gradient AI models**.
 
-``` bash
-# Clone the repository
+The AI identifies:
+
+- error spikes
+- latency anomalies
+- security threats
+- resource exhaustion
+
+---
+
+## 🚨 Instant Alerting
+
+When anomalies are detected:
+
+- alerts are generated
+- severity levels are assigned
+- engineers are notified instantly
+
+---
+
+## 📊 Interactive Dashboard
+
+Real-time UI provides full system visibility.
+
+Features:
+
+- live log stream
+- anomaly alerts
+- AI summaries
+- performance metrics
+
+---
+
+# 🛠 Tech Stack
+
+## 💻 Backend & Core
+
+| Technology | Description |
+|------------|-------------|
+| 🟣 Kotlin | Backend development |
+| 🍃 Spring Boot | Microservice framework |
+| 🟠 Apache Kafka | Log streaming platform |
+| 🔗 WebFlux | Reactive processing |
+| 🐳 Docker | Containerized deployment |
+
+---
+
+## 🤖 Artificial Intelligence
+
+| Technology | Description |
+|------------|-------------|
+| 🌊 DigitalOcean Gradient | Serverless AI inference |
+| 🧠 Llama3-8B | Anomaly detection model |
+
+---
+
+## 🌐 Frontend & Visualization
+
+| Technology | Description |
+|------------|-------------|
+| ⚛️ React | UI framework |
+| ▲ Next.js | Frontend platform |
+| 🔄 SSE | Real-time data streaming |
+| 🎨 CSS | Dashboard styling |
+
+---
+
+# 📊 Dashboard Features
+
+InsightStream dashboard provides:
+
+✔ Live log monitoring  
+✔ AI anomaly alerts  
+✔ System metrics  
+✔ Scenario simulation  
+
+---
+
+# 🧪 Scenario Simulation
+
+To demonstrate anomaly detection, the dashboard includes built-in log generators:
+
+| Scenario | Description |
+|--------|-------------|
+| 🔥 Error Spike | Sudden increase in server errors |
+| 🛑 Brute Force | Repeated login failures |
+| 🐢 DB Latency | Slow database queries |
+| 💾 Memory Pressure | High memory usage |
+
+These scenarios allow real-time observation of the AI detection pipeline.
+
+---
+
+# 🚀 Getting Started
+
+## 1️⃣ Clone the repository
+
+```bash
 git clone https://github.com/HyeonbinJung/InsightStream.git
-
-# Run Kafka with Docker
-docker-compose up -d
-
-# Run the Spring Boot application
-./gradlew bootRun
+cd InsightStream
 ```
+
+## 2️⃣ Set DigitalOcean Gradient API key
+```bash 
+export DO_MODEL_ACCESS_KEY=YOUR_KEY
+```
+## 3️⃣ Run with Docker
+```bash 
+docker compose up -d --build
+```
+## 4️⃣ Open the dashboard
+```bash 
+http://localhost:3000
+```
+## 📁 Project Structure
+```bash 
+InsightStream
+│
+├─ backend
+│  ├─ kafka consumer
+│  ├─ AI inference
+│  ├─ alert engine
+│
+├─ dashboard
+│  ├─ realtime UI
+│  ├─ log visualization
+│
+└─ docker
+   ├─ kafka
+   ├─ backend
+   └─ dashboard
+```
+## 🔮 Future Improvements
+
+Incident timeline analysis
+Root cause detection
+Multi-service correlation
+distributed tracing integration
