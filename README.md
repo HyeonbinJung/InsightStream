@@ -31,7 +31,8 @@ Instead of manually searching through thousands of logs, InsightStream automatic
 
 Real-time monitoring dashboard
 
-<img width="702" height="840" alt="image" src="https://github.com/user-attachments/assets/61f28222-5f4b-4a4b-aaf7-bb11c062f6f7" />
+<img width="450" height="695" alt="image" src="https://github.com/user-attachments/assets/af1ec1e6-4023-4f31-b954-0a051382d57f" />
+
 
 - Live log stream
 - AI anomaly detection
