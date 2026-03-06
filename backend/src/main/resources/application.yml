@@ -1,0 +1,46 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://${POSTGRES_HOST:postgres}:${POSTGRES_PORT:5432}/${POSTGRES_DB:insightstream}
+    username: ${POSTGRES_USER:insight}
+    password: ${POSTGRES_PASSWORD:insight}
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:kafka:9092}
+    consumer:
+      group-id: insightstream-consumer
+      auto-offset-reset: earliest
+      enable-auto-commit: false
+      properties:
+        spring.json.trusted.packages: "*"
+    listener:
+      ack-mode: manual_immediate
+    producer:
+      acks: all
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,info"
+
+insight:
+  topics:
+    logs: ${INSIGHT_LOG_TOPIC:logs.raw}
+    alerts: ${INSIGHT_ALERT_TOPIC:alerts}
+    metrics: ${INSIGHT_METRIC_TOPIC:logs.metrics.window}
+  windowing:
+    shortWindowSec: ${INSIGHT_SHORT_WINDOW_SEC:5}
+    longWindowSec: ${INSIGHT_LONG_WINDOW_SEC:30}
+  gradient:
+    baseUrl: ${DO_INFERENCE_BASE_URL:https://inference.do-ai.run}
+    model: ${DO_INFERENCE_MODEL:llama3-8b-instruct}
+    accessKey: ${DO_MODEL_ACCESS_KEY:}
+  vector:
+    enabled: ${INSIGHT_VECTOR_ENABLED:true}
+    dimensions: ${INSIGHT_VECTOR_DIMENSIONS:64}
+  telemetry:
+    serviceName: ${OTEL_SERVICE_NAME:insightstream-backend}
+    otlpEndpoint: ${OTEL_EXPORTER_OTLP_ENDPOINT:http://otel-collector:4317}
+    otlpEnabled: ${OTEL_EXPORTER_OTLP_ENABLED:false}
