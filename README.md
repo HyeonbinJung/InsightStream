@@ -3,19 +3,17 @@
 
 ![Kotlin](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/SpringBoot-6DB33F?logo=springboot&logoColor=white)
-![WebFlux](https://img.shields.io/badge/Spring-WebFlux-6DB33F?logo=spring&logoColor=white)
-![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-231F20?logo=apachekafka&logoColor=white)
-![Kafka Streams](https://img.shields.io/badge/Kafka%20Streams-231F20?logo=apachekafka&logoColor=white)
+![Spring MVC](https://img.shields.io/badge/Spring-MVC-6DB33F?logo=spring&logoColor=white)
+![Spring Kafka](https://img.shields.io/badge/Spring-Kafka-231F20?logo=apachekafka&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 
-![DigitalOcean](https://img.shields.io/badge/DigitalOcean%20Gradient-0080FF?logo=digitalocean&logoColor=white) 
+![DigitalOcean](https://img.shields.io/badge/DigitalOcean%20Gradient-0080FF?logo=digitalocean&logoColor=white)
 ![Llama3](https://img.shields.io/badge/Llama3-000000?logo=meta&logoColor=white)
-![JSON](https://img.shields.io/badge/Structured-JSON%20Output-4B5563)
 
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
-![SSE](https://img.shields.io/badge/SSE-Real--time%20Streaming-orange)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![SSE](https://img.shields.io/badge/Server--Sent%20Events-orange)
 
 
 
