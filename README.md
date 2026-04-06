@@ -23,6 +23,9 @@ InsightStream is an **AI-driven observability platform** that analyzes log strea
 
 Instead of manually searching through thousands of logs, InsightStream automatically detects anomalies, summarizes incidents, and provides operational insights through a **real-time dashboard**.
 
+Check Youtube Video!
+https://youtu.be/VGjj662PiOE?si=Lb_zM17urur0GL0J 
+
 ---
 
 # 📸 Demo
